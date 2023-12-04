@@ -6,9 +6,27 @@ public class multiwayTrainSegment : TrainSegment
 {
 
     private int road = 0;
-    public int length = 3;
+    private int loopsafe = 0;
+
     public GameObject point1;
     // Update is called once per frame
+
+    private void Start() {
+        //get the cildren of spriteRenderer
+        SpriteRenderer[] children = GetComponentsInChildren<SpriteRenderer>();
+        //disable all sprites
+        for(int i = 0; i < children.Length - 1; i++){
+            children[i].enabled = false;
+        }
+        while(nextSegments[road] == null && loopsafe < 3){
+            road = (road + 1) % 3;
+            loopsafe++;
+        } 
+        loopsafe = 0;
+        children[road].enabled = true;
+
+        
+    } 
     public override Vector3 Move(float interpolateAmount)
     {
         //get the cildren of gameobject
@@ -29,7 +47,28 @@ public class multiwayTrainSegment : TrainSegment
     }
 
     public void Switch(){
-        road = (road + 1) % length;
+        SpriteRenderer[] children = GetComponentsInChildren<SpriteRenderer>();
+        
+        children[road].enabled = false;
+        road = (road + 1) % 3;
+        while(nextSegments[road] == null && loopsafe < 3){
+            road = (road + 1) % 3;
+            loopsafe++;
+        }
+        loopsafe = 0;
+        children[road].enabled = true;
+
+    }
+
+    public override GameObject getNextSegment(){
+        // Debug.Log(nextSegments.Count);
+        GameObject nextSegment = nextSegments[road];
+        while(nextSegment == null && loopsafe < 3){
+            nextSegment = nextSegments[road+1 % 3];
+            loopsafe++;
+        }
+        loopsafe = 0;
+        return nextSegment;
     }
 
     public override void OnDrawGizmos() {
@@ -38,7 +77,7 @@ public class multiwayTrainSegment : TrainSegment
         //get the first child
         Transform firstChild = children[1];
         //get the last child
-        for(int i = 0; i < length; i++){
+        for(int i = 0; i < 3; i++){
             Transform lastChild = children[2 + i];
             for(float t = 0; t < 1; t+=0.02f)
             Gizmos.DrawLine(quadBezier(firstChild.transform.position,

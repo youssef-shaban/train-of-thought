@@ -12,7 +12,7 @@ public class trainMovement : MonoBehaviour
     private TrainSegment trainSegment;
     // Update is called once per frame
     void Update()
-    {
+    { 
         trainSegment = StartingSegment.GetComponent<TrainSegment>();
         //get the trainSegment component of the starting segment
         interpolateAmount = (interpolateAmount + Time.deltaTime * speed);
@@ -22,7 +22,7 @@ public class trainMovement : MonoBehaviour
         if(interpolateAmount >= 1)
         {
             //set the starting segment to the next segment
-            StartingSegment = trainSegment.nextSegment;
+            StartingSegment = trainSegment.getNextSegment();
             //reset the interpolateAmount
             interpolateAmount = 0;
         }

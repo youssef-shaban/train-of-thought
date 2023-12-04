@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TrainSegment : MonoBehaviour
 {
-    public GameObject nextSegment;
+
+    public List<GameObject> nextSegments = new List<GameObject>();
 
     public virtual Vector3 Move(float interpolateAmount)
     {
@@ -17,6 +18,11 @@ public class TrainSegment : MonoBehaviour
         Transform lastChild = children[children.Length - 1];
         //interpolate the position of the moving part to the position of the last child
         return Vector3.Lerp(firstChild.transform.position, lastChild.position, interpolateAmount);
+    }
+
+    public virtual GameObject getNextSegment(){
+        //do nothing
+        return nextSegments[0];
     }
 
     public virtual void OnDrawGizmos() {
