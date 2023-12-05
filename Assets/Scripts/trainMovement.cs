@@ -22,9 +22,17 @@ public class trainMovement : MonoBehaviour
         if(interpolateAmount >= 1)
         {
             //set the starting segment to the next segment
+            try
+            {
             StartingSegment = trainSegment.getNextSegment();
             //reset the interpolateAmount
             interpolateAmount = 0;
+            }
+            catch (System.Exception)
+            {
+                Destroy(gameObject);
+            }
+
         }
 
     }
