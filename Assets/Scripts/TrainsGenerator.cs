@@ -36,9 +36,17 @@ public class TrainsGenerator : MonoBehaviour
     InvokeRepeating("GenerateObject", 0f,3f);
 
     }
+
+    private void Update() {
+        int TravelledTrains = ScoreManager.instance.Travelled();
+        if(TravelledTrains == ScoreManager.instance.NumberOfTrains){
+            //Game ends 
+        }
+
+    }
     void GenerateObject()
     {
-        if(counter < NumberOfBalls)
+        if(counter < ScoreManager.instance.NumberOfTrains)
         {
             var obj =Instantiate(train,transform.position,Quaternion.identity);
             obj.GetComponent<trainMovement>().StartingSegment = starting;
@@ -57,9 +65,5 @@ public class TrainsGenerator : MonoBehaviour
         //Item1
         int index = random.Next(0,ColorsAndClass.Count);
         return ColorsAndClass[index];
-    }
-    void Update()
-    {
-        
     }
 }

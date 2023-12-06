@@ -16,11 +16,13 @@ public class Destenation : MonoBehaviour
         
     }
     private void OnCollisionEnter2D(Collision2D other) {
-        var TrainClass = other.collider.GetComponent<ClassAssign>().ClassNumber;  
+        var TrainClass = other.collider.GetComponent<ClassAssign>().ClassNumber; 
         if(gameObject.GetComponent<ClassAssign>().ClassNumber == TrainClass)
         {
             ScoreManager.instance.AddPoint();
             Destroy(other.collider);
         }
+        ScoreManager.instance.AddTravelled();
+
          }
 }
