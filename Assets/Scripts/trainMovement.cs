@@ -30,7 +30,7 @@ public class trainMovement : MonoBehaviour
             }
             catch (System.Exception)
             {
-                Destroy(gameObject);
+               gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
 
         }
