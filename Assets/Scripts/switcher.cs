@@ -8,9 +8,6 @@ public class switcher : MonoBehaviour
 
     // Update is called once per frame
 
-    private void OnMouseDown() {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 1f);
-    }
     private void OnMouseUp() {
         trainSegment.GetComponent<multiwayTrainSegment>().Switch();
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
@@ -19,7 +16,7 @@ public class switcher : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
     }
     private void OnMouseExit() {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 0.3f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 0.6f);
     }
 
     

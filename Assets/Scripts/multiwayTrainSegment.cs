@@ -37,6 +37,17 @@ public class multiwayTrainSegment : TrainSegment
         Transform firstChild = children[1];
         //get the last child
         Transform lastChild = children[2 + road];
+        //check if these two points have close x values or y values, if so use lerp
+        float x_gap = firstChild.position[0] - lastChild.position[0];
+        if(x_gap < 0)
+            x_gap*= -1;
+        float y_gap = firstChild.position[1] - lastChild.position[1];
+        if(y_gap < 0)
+            y_gap*= -1; 
+
+        if(x_gap < 0.05 || y_gap < 0.05)
+            return Vector3.Lerp(firstChild.transform.position, lastChild.position, interpolateAmount);
+
         //interpolate the position of the moving part to the position of the last child
         return quadBezier(firstChild.transform.position, point1.transform.position, lastChild.position, interpolateAmount);
         // return Vector3.Lerp(firstChild.transform.position, lastChild.position, interpolateAmount);
