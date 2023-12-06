@@ -22,6 +22,7 @@ public class TrainsGenerator : MonoBehaviour
 {
 
     public GameObject train;
+    public GameObject GameOver;
     public List<ColorsAndClassestPair> ColorsAndClass = new List<ColorsAndClassestPair>();
 
     public int NumberOfBalls;
@@ -40,7 +41,7 @@ public class TrainsGenerator : MonoBehaviour
     private void Update() {
         int TravelledTrains = ScoreManager.instance.Travelled();
         if(TravelledTrains == ScoreManager.instance.NumberOfTrains){
-            //Game ends 
+            GameOver.GetComponent<GameOverHandler>().SwitchScene(true);
         }
 
     }

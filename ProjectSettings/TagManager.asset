@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: GameOverHidden
+    uniqueID: 2823082163
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -52,4 +55,7 @@ TagManager:
     locked: 0
   - name: Switch
     uniqueID: 191085167
+    locked: 0
+  - name: GameOverAppear
+    uniqueID: 785733873
     locked: 0

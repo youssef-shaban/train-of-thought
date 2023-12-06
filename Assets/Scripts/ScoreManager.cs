@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public int NumberOfTrains;
 
-    int score = 0;
+    public int score = 0;
     int travelled = 0;
 
 private void Awake() {

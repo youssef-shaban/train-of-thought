@@ -16,11 +16,23 @@ public class ScenesManager : MonoBehaviour
     {
         
     }
-    public void level1(){
+    public void Level1(){
         SceneManager.LoadScene(1);
     }
 
-    public void level2(){
+    public void Level2(){
         SceneManager.LoadScene(2);
+    }
+
+    public void Menu(){
+        SceneManager.LoadScene(0);
+    }
+    public void GameOver(){
+        SceneManager.LoadScene(3);
+    }
+
+    public void CurrentScene(){
+        int currentSceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneBuildIndex);
     }
 }
