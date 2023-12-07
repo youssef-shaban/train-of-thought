@@ -25,7 +25,6 @@ public class TrainsGenerator : MonoBehaviour
     public GameObject GameOver;
     public List<ColorsAndClassestPair> ColorsAndClass = new List<ColorsAndClassestPair>();
 
-    public int NumberOfBalls;
     private int counter =0;
 
     public GameObject starting;
@@ -63,7 +62,6 @@ public class TrainsGenerator : MonoBehaviour
 
     ColorsAndClassestPair getColor()
     {
-        //Item1
         int index = random.Next(0,ColorsAndClass.Count);
         return ColorsAndClass[index];
     }

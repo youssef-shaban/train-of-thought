@@ -624,7 +624,6 @@ GameObject:
   - component: {fileID: 216630054}
   - component: {fileID: 216630053}
   - component: {fileID: 216630052}
-  - component: {fileID: 216630051}
   m_Layer: 5
   m_Name: ReplayButton
   m_TagString: Untagged
@@ -651,19 +650,6 @@ RectTransform:
   m_AnchoredPosition: {x: -296.79996, y: 193.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &216630051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216630049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc2f8f654fd5f844b43f9a5dd5d7116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 1256778027}
 --- !u!114 &216630052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 216630051}
+      - m_Target: {fileID: 226370106}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
         m_MethodName: CurrentScene
         m_Mode: 1
@@ -1011,6 +997,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1609428052543306488, guid: 65ac35b4d976984499fd9623d19c6ad4, type: 3}
   m_PrefabInstance: {fileID: 420927659}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &226370105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226370107}
+  - component: {fileID: 226370106}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226370106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226370105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc2f8f654fd5f844b43f9a5dd5d7116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1256778027}
+--- !u!4 &226370107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226370105}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &243745068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2586,6 +2617,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ac35b4d976984499fd9623d19c6ad4, type: 3}
+--- !u!1 &854545537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854545540}
+  - component: {fileID: 854545539}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &854545539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854545537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d488bb7707a8b484b8464a1ced3d8618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1959528248}
+  NumberOfTrains: 20
+  score: 0
+--- !u!4 &854545540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854545537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.29944584, y: 0.883342, z: -0.2344228, w: 0.27401647}
+  m_LocalPosition: {x: 1.804, y: -4.1, z: -1.2822}
+  m_LocalScale: {x: 0.36801004, y: 0.36801004, z: 0.81780005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869835436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1609428052543306488, guid: 65ac35b4d976984499fd9623d19c6ad4, type: 3}
@@ -2680,7 +2758,6 @@ GameObject:
   - component: {fileID: 906911852}
   - component: {fileID: 906911851}
   - component: {fileID: 906911850}
-  - component: {fileID: 906911849}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2688,21 +2765,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &906911849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906911848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d488bb7707a8b484b8464a1ced3d8618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1959528248}
-  NumberOfTrains: 20
-  score: 0
 --- !u!114 &906911850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,9 +3086,17 @@ PrefabInstance:
       value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 6633340593752483237, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 226370106}
+    - target: {fileID: 6633340593752483237, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CurrentScene
       objectReference: {fileID: 0}
+    - target: {fileID: 7596448740677615958, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 226370106}
     - target: {fileID: 7596448740677615958, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Menu
@@ -3047,7 +3117,9 @@ PrefabInstance:
       propertyPath: FinalScoreText
       value: 
       objectReference: {fileID: 292341523}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1502384802780347954, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
+    - {fileID: 4504382499677105227, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3162,7 +3234,6 @@ MonoBehaviour:
     color: {r: 0.7924528, g: 0.51499903, b: 0.3700605, a: 1}
   - Class: 4
     color: {r: 0.62352943, g: 0.427451, b: 0.43137258, a: 1}
-  NumberOfBalls: 15
   starting: {fileID: 1480240494}
 --- !u!1001 &1031845076
 PrefabInstance:
@@ -4963,7 +5034,6 @@ GameObject:
   - component: {fileID: 1717297419}
   - component: {fileID: 1717297418}
   - component: {fileID: 1717297417}
-  - component: {fileID: 1717297416}
   m_Layer: 5
   m_Name: StopMusicButton
   m_TagString: Untagged
@@ -4990,19 +5060,6 @@ RectTransform:
   m_AnchoredPosition: {x: -258.4, y: 193.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1717297416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717297414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc2f8f654fd5f844b43f9a5dd5d7116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 1256778027}
 --- !u!114 &1717297417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5047,7 +5104,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1717297416}
+      - m_Target: {fileID: 226370106}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
         m_MethodName: stopMusic
         m_Mode: 1
@@ -5656,6 +5713,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1080406021}
   - {fileID: 723736687}
+  - {fileID: 226370107}
   - {fileID: 990214167}
   - {fileID: 1963919102}
   - {fileID: 1256778028}
@@ -5664,6 +5722,7 @@ SceneRoots:
   - {fileID: 575458755}
   - {fileID: 1363677917}
   - {fileID: 221908951}
+  - {fileID: 854545540}
   - {fileID: 450222370}
   - {fileID: 1244084739}
   - {fileID: 1465066087}
