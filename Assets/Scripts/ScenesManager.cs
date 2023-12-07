@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,13 @@ public class ScenesManager : MonoBehaviour
     public void CurrentScene(){
         int currentSceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneBuildIndex);
+    }
+
+    public void stopMusic(){
+        if(audio.volume != 0){
+            audio.volume = 0;
+        } else {
+            audio.volume = 0.25f;
+        }
     }
 }
