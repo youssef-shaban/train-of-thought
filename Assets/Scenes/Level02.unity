@@ -1258,7 +1258,7 @@ Transform:
   m_GameObject: {fileID: 667100900}
   serializedVersion: 2
   m_LocalRotation: {x: 0.39402434, y: 0.86267054, z: -0.21738419, w: 0.23084311}
-  m_LocalPosition: {x: 10.174, y: -0.9442, z: -0.9785}
+  m_LocalPosition: {x: 9.3, y: -0.9442, z: -0.9785}
   m_LocalScale: {x: 0.32352, y: 0.32352, z: 0.8088}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1506,7 +1506,7 @@ Transform:
   m_GameObject: {fileID: 682189438}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13350782, y: 0.32757863, z: 0.35295036, w: 0.86619514}
-  m_LocalPosition: {x: -5.3769994, y: -2.636, z: -0.9866}
+  m_LocalPosition: {x: -4.92, y: -2.636, z: -0.9866}
   m_LocalScale: {x: 0.32352, y: 0.32352, z: 0.8088}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3132,7 +3132,7 @@ Transform:
   m_GameObject: {fileID: 1111030244}
   serializedVersion: 2
   m_LocalRotation: {x: 0.41657412, y: 0.81530946, z: -0.30690652, w: 0.2598941}
-  m_LocalPosition: {x: 9.748, y: -4.551, z: -0.842}
+  m_LocalPosition: {x: 9.55, y: -4.551, z: -0.842}
   m_LocalScale: {x: 0.32352, y: 0.32352, z: 0.8088}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4080,6 +4080,14 @@ PrefabInstance:
     - target: {fileID: 6165539217345112962, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
       propertyPath: m_Name
       value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633340593752483237, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596448740677615958, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8036829199165323213, guid: e91c91e2c0f64e041baa8c0e1a4078ea, type: 3}
       propertyPath: m_Enabled
@@ -5396,7 +5404,7 @@ Transform:
   m_GameObject: {fileID: 1743681742}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2691, y: -0.7177, z: -1.0594}
+  m_LocalPosition: {x: -4.99, y: -0.7177, z: -1.0594}
   m_LocalScale: {x: 0.26317698, y: 0.3109866, z: 0.2240376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6842,9 +6850,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1008667489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 489.9, y: 250.9}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -35}
   m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2028646969
